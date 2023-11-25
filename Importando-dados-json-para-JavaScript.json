@@ -80,4 +80,8 @@
     {
       "titulo": "Conclusão",
       "paragrafos": [
-        "Em resumo, este código exemplifica como importar dados externos em formato JSON para uma página web e apresentá-los de maneira estruturada. A utilização de funções assíncronas e manipulação do DOM
+        "Em resumo, este código exemplifica como importar dados externos em formato JSON para uma página web e apresentá-los de maneira estruturada. A utilização de funções assíncronas e manipulação do DOM possibilita uma integração suave e eficiente, enriquecendo a experiência do usuário ao exibir conteúdo dinâmico."
+      ]
+    }
+  ]
+}
