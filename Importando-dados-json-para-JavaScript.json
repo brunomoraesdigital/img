@@ -14,14 +14,14 @@
       "codigo": [
         "// URL do JSON",
         "const jsonURL = 'https://raw.githubusercontent.com/brunomoraesdigital/ressources/main/Importando-dados-json-para-JavaScript.json';",
-      
+        "",
         "// Função para carregar e processar o JSON",
         "async function carregarConteudo() {",
         "  try {",
         "    // Obter os dados JSON",
         "    const resposta = await fetch(jsonURL);",
         "    const data = await resposta.json();",
-      
+        "",
         "    // Chamar função para exibir o conteúdo",
         "    exibirConteudo(data.conteudo);",
         "  } catch (erro) {",
@@ -38,16 +38,16 @@
       "codigo": [
         "function exibirConteudo(conteudo) {",
         "  const container = document.getElementById('conteudo-container');",
-      
+        "",
         "  // Iterar sobre os itens do JSON",
         "  conteudo.forEach(item => {",
         "    // Criar um elemento para o título",
         "    const tituloElemento = document.createElement('h2');",
         "    tituloElemento.textContent = item.titulo;",
-      
+        "",
         "    // Adicionar o título ao contêiner",
         "    container.appendChild(tituloElemento);",
-      
+        "",
         "    // Iterar sobre os parágrafos",
         "    item.paragrafos.forEach(paragrafo => {",
         "      // Criar um elemento para o parágrafo",
@@ -56,20 +56,20 @@
         "      // Adicionar o parágrafo ao contêiner",
         "      container.appendChild(paragrafoElemento);",
         "    });",
-      
+        "",
         "    // Adicionar código, se existir",
         "    if (item.codigo) {",
         "      // Criar um elemento <pre> para o bloco de código",
         "      const codigoElemento = document.createElement('pre');",
         "      // Utilizar JSON.stringify para manter a formatação do código",
         "      codigoElemento.textContent = item.codigo.join('\\n');",
-      
+        "",
         "      // Adicionar a classe 'javascript' para indicar que é código JavaScript",
         "      codigoElemento.classList.add('javascript');",
-      
+        "",
         "      // Adicionar o bloco de código ao contêiner",
         "      container.appendChild(codigoElemento);",
-      
+        "",
         "      // Realizar a formatação de sintaxe usando highlight.js",
         "      hljs.highlightElement(codigoElemento);",
         "    }",
