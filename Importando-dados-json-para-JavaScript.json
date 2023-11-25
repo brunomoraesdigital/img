@@ -9,13 +9,13 @@
     {
       "titulo": "Carregando o JSON",
       "paragrafos": [
-        "O ponto de partida do código é a definição da URL do JSON, localizado em um repositório GitHub. A função carregarConteudo é responsável por buscar e processar esses dados. A utilização do fetch e await permite a execução assíncrona, garantindo a eficiência do carregamento."
+        "O ponto de partida do código é a definição da URL do JSON. A função carregarConteudo é responsável por buscar e processar esses dados. A utilização do fetch e await permite a execução assíncrona, garantindo a eficiência do carregamento."
       ],
       "codigo": [
-        "// URL do JSON",
+        "// Definição da URL do JSON",
         "const jsonURL = 'https://raw.githubusercontent.com/brunomoraesdigital/ressources/main/Importando-dados-json-para-JavaScript.json';",
         "",
-        "// Função para carregar e processar o JSON",
+        "// Função assíncrona para carregar e processar o JSON",
         "async function carregarConteudo() {",
         "  try {",
         "    // Obter os dados JSON",
@@ -36,12 +36,13 @@
         "A função exibirConteudo é acionada após o carregamento bem-sucedido do JSON. Ela percorre os itens do JSON, cria elementos HTML dinamicamente para os títulos e parágrafos e os adiciona ao contêiner específico na página."
       ],
       "codigo": [
+        "// Função para exibir o conteúdo na página",
         "function exibirConteudo(conteudo) {",
         "  const container = document.getElementById('conteudo-container');",
         "",
         "  // Iterar sobre os itens do JSON",
         "  conteudo.forEach(item => {",
-        "    // Criar um elemento para o título",
+        "    // Criando e adicionando título ao contêiner",
         "    const tituloElemento = document.createElement('h2');",
         "    tituloElemento.textContent = item.titulo;",
         "",
