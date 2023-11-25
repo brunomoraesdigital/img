@@ -1,39 +1,58 @@
 {
   "conteudo": [
     {
-      "titulo": "Importando dados JSON para JavaScript",
+      "titulo": "Importando e Exibindo Dados JSON em JavaScript",
       "paragrafos": [
-        "Na era da programação em constante evolução, a manipulação de dados desempenha um papel crucial na construção de aplicativos modernos. Entre as diversas formas de dados, o formato JSON (JavaScript Object Notation) destaca-se como uma ferramenta poderosa para estruturar informações de maneira legível e eficiente. Assim como a barra de rolagem guia nossa jornada digital, o entendimento e importação de dados JSON tornam-se a bússola que orienta os desenvolvedores em sua exploração do vasto universo da programação."
+        "A integração de dados JSON em páginas da web é uma tarefa comum para desenvolvedores front-end. Neste código JavaScript, exploraremos como importar dados de um arquivo JSON remoto e exibi-los dinamicamente em uma página HTML. O código utiliza funções assíncronas e manipulação do DOM para criar uma experiência de usuário interativa."
       ]
     },
     {
-      "titulo": "A Jornada pelos Dados Estruturados",
+      "titulo": "Carregando o JSON",
       "paragrafos": [
-        "Ao navegarmos por APIs ou bancos de dados, nos deparamos com vastas quantidades de dados estruturados em JSON. Essa estrutura, semelhante a uma barra de rolagem, permite-nos percorrer os registros e informações, facilitando a extração do que é necessário para enriquecer nossas aplicações. Com um simples código em JavaScript, podemos desbravar as profundezas dos objetos, arrays e propriedades, assim como deslizamos pelos conteúdos online."
+        "O ponto de partida do código é a definição da URL do JSON, localizado em um repositório GitHub. A função carregarConteudo é responsável por buscar e processar esses dados. A utilização do fetch e await permite a execução assíncrona, garantindo a eficiência do carregamento."
+      ],
+      "codigo": [
+        "// Código 1: Definição da URL do JSON",
+        "const jsonURL = 'https://raw.githubusercontent.com/brunomoraesdigital/ressources/main/Importando-dados-json-para-JavaScript.json';",
+        "",
+        "// Código 2: Função assíncrona para carregar e processar o JSON",
+        "async function carregarConteudo() {",
+        "  try {",
+        "    const resposta = await fetch(jsonURL);",
+        "    const data = await resposta.json();",
+        "    // ..."
       ]
     },
     {
-      "titulo": "A Harmonia da Sintaxe JSON e JavaScript",
+      "titulo": "Exibindo o Conteúdo na Página",
       "paragrafos": [
-        "Quando bem integrados, JSON e JavaScript formam uma parceria harmoniosa, semelhante à união entre a barra de rolagem e o background de uma página bem projetada. A sintaxe simples e legível do JSON alinha-se perfeitamente com a linguagem dinâmica e versátil do JavaScript, criando uma experiência de desenvolvimento suave e eficiente. Assim como uma barra de rolagem transparente, a integração eficiente dessas tecnologias permite que o desenvolvedor percorra os dados com facilidade, sem interrupções."
+        "A função exibirConteudo é acionada após o carregamento bem-sucedido do JSON. Ela percorre os itens do JSON, cria elementos HTML dinamicamente para os títulos e parágrafos e os adiciona ao contêiner específico na página."
+      ],
+      "codigo": [
+        "// Código 3: Função para exibir o conteúdo na página",
+        "function exibirConteudo(conteudo) {",
+        "  const container = document.getElementById('conteudo-container');",
+        "",
+        "  conteudo.forEach(item => {",
+        "    // Código 4: Criando e adicionando título ao contêiner",
+        "    const tituloElemento = document.createElement('h2');",
+        "    tituloElemento.textContent = item.titulo;",
+        "    container.appendChild(tituloElemento);",
+        "",
+        "    // Código 5: Iterando sobre os parágrafos e adicionando-os ao contêiner",
+        "    item.paragrafos.forEach(paragrafo => {",
+        "      const paragrafoElemento = document.createElement('p');",
+        "      paragrafoElemento.textContent = paragrafo;",
+        "      container.appendChild(paragrafoElemento);",
+        "    });",
+        "  });",
+        "}"
       ]
     },
     {
-      "titulo": "A Personalização da Manipulação de Dados",
+      "titulo": "Conclusão",
       "paragrafos": [
-        "A versatilidade do JavaScript permite uma personalização extraordinária na manipulação de dados JSON. Os desenvolvedores podem selecionar, filtrar e modificar dados de acordo com as necessidades específicas de seus aplicativos. Essa capacidade de personalização não apenas torna a manipulação de dados eficiente, mas também confere uma abordagem personalizada à forma como os dados são processados e apresentados, moldando a experiência do usuário final."
-      ]
-    },
-    {
-      "titulo": "O Futuro da Manipulação de Dados em JavaScript",
-      "paragrafos": [
-        "À medida que avançamos no universo da programação, a manipulação de dados em JavaScript continuará a evoluir, moldando o futuro do desenvolvimento de aplicativos. Assim como a barra de rolagem é uma ferramenta essencial na navegação digital, a habilidade de importar e manipular dados JSON permanecerá fundamental. É a chave que conecta o desenvolvedor ao vasto repositório de informações estruturadas, capacitando-os a explorar e inovar."
-      ]
-    },
-    {
-      "titulo": "Desvendando o Poder dos Dados JSON em JavaScript",
-      "paragrafos": [
-        "Desvendar o potencial dos dados JSON em JavaScript é explorar o futuro da programação. A tecnologia nos convida a explorar o desconhecido, e a manipulação eficiente de dados JSON é a chave que desbloqueia as maravilhas do desenvolvimento de aplicativos modernos. Em cada linha de código, estamos esculpindo o futuro da programação, moldando a forma como interagimos com a vastidão de informações que a tecnologia nos oferece."
+        "Em resumo, este código exemplifica como importar dados externos em formato JSON para uma página web e apresentá-los de maneira estruturada. A utilização de funções assíncronas e manipulação do DOM possibilita uma integração suave e eficiente, enriquecendo a experiência do usuário ao exibir conteúdo dinâmico."
       ]
     }
   ]
