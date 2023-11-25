@@ -12,22 +12,22 @@
         "O ponto de partida do código é a definição da URL do JSON, localizado em um repositório GitHub. A função carregarConteudo é responsável por buscar e processar esses dados. A utilização do fetch e await permite a execução assíncrona, garantindo a eficiência do carregamento."
       ],
       "codigo": [
-      "// URL do JSON",
-      "const jsonURL = 'https:,//raw.githubusercontent.com/brunomoraesdigital/ressources/main/Importando-dados-json-para-JavaScript.json';",
+        "// URL do JSON",
+        "const jsonURL = 'https://raw.githubusercontent.com/brunomoraesdigital/ressources/main/Importando-dados-json-para-JavaScript.json';",
       
-      "// Função para carregar e processar o JSON",
-      "async function carregarConteudo() {",
-      "  try {",
-      "    // Obter os dados JSON",
-      "    const resposta = await fetch(jsonURL);",
-      "    const data = await resposta.json();",
+        "// Função para carregar e processar o JSON",
+        "async function carregarConteudo() {",
+        "  try {",
+        "    // Obter os dados JSON",
+        "    const resposta = await fetch(jsonURL);",
+        "    const data = await resposta.json();",
       
-      "    // Chamar função para exibir o conteúdo",
-      "    exibirConteudo(data.conteudo);",
-      "  } catch (erro) {",
-      "    console.error('Erro ao carregar JSON:', erro);",
-      "  }",
-      "}"
+        "    // Chamar função para exibir o conteúdo",
+        "    exibirConteudo(data.conteudo);",
+        "  } catch (erro) {",
+        "    console.error('Erro ao carregar JSON:', erro);",
+        "  }",
+        "}"
       ]
     },
     {
@@ -36,52 +36,48 @@
         "A função exibirConteudo é acionada após o carregamento bem-sucedido do JSON. Ela percorre os itens do JSON, cria elementos HTML dinamicamente para os títulos e parágrafos e os adiciona ao contêiner específico na página."
       ],
       "codigo": [
-"function exibirConteudo(conteudo) {",
-"  const container = document.getElementById('conteudo-container');",
-
-"  // Iterar sobre os itens do JSON",
-"  conteudo.forEach(item => {",
-"    // Criar um elemento para o título",
-"    const tituloElemento = document.createElement('h2');",
-"    tituloElemento.textContent = item.titulo;",
-
-"    // Adicionar o título ao contêiner",
-"    container.appendChild(tituloElemento);",
-
-"    // Iterar sobre os parágrafos",
-"    item.paragrafos.forEach(paragrafo => {",
-"      // Criar um elemento para o parágrafo",
-"      const paragrafoElemento = document.createElement('p');",
-,"      paragrafoElemento.textContent = paragrafo;",
-
-"      // Adicionar o parágrafo ao contêiner",
-"      container.appendChild(paragrafoElemento);",
-"    });",
-"// Adicionar código, se existir",
-"    if (item.codigo) {",
-"      // Criar um elemento <pre> para o bloco de código",
-"      const codigoElemento = document.createElement('pre');",
-"      // Utilizar JSON.stringify para manter a formatação do código",
-"      codigoElemento.textContent = item.codigo.join('\n');",
-
-"      // Adicionar a classe 'javascript' para indicar que é código JavaScript",
-"      codigoElemento.classList.add('javascript');",
-
-"      // Adicionar o bloco de código ao contêiner",
-"      container.appendChild(codigoElemento);",
-
-"      // Realizar a formatação de sintaxe usando highlight.js",
-"      hljs.highlightElement(codigoElemento);",
-"    }",
-"  });",
-"}",
+        "function exibirConteudo(conteudo) {",
+        "  const container = document.getElementById('conteudo-container');",
+      
+        "  // Iterar sobre os itens do JSON",
+        "  conteudo.forEach(item => {",
+        "    // Criar um elemento para o título",
+        "    const tituloElemento = document.createElement('h2');",
+        "    tituloElemento.textContent = item.titulo;",
+      
+        "    // Adicionar o título ao contêiner",
+        "    container.appendChild(tituloElemento);",
+      
+        "    // Iterar sobre os parágrafos",
+        "    item.paragrafos.forEach(paragrafo => {",
+        "      // Criar um elemento para o parágrafo",
+        "      const paragrafoElemento = document.createElement('p');",
+        "      paragrafoElemento.textContent = paragrafo;",
+        "      // Adicionar o parágrafo ao contêiner",
+        "      container.appendChild(paragrafoElemento);",
+        "    });",
+      
+        "    // Adicionar código, se existir",
+        "    if (item.codigo) {",
+        "      // Criar um elemento <pre> para o bloco de código",
+        "      const codigoElemento = document.createElement('pre');",
+        "      // Utilizar JSON.stringify para manter a formatação do código",
+        "      codigoElemento.textContent = item.codigo.join('\\n');",
+      
+        "      // Adicionar a classe 'javascript' para indicar que é código JavaScript",
+        "      codigoElemento.classList.add('javascript');",
+      
+        "      // Adicionar o bloco de código ao contêiner",
+        "      container.appendChild(codigoElemento);",
+      
+        "      // Realizar a formatação de sintaxe usando highlight.js",
+        "      hljs.highlightElement(codigoElemento);",
+        "    }",
+        "  });",
+        "}"
       ]
     },
     {
       "titulo": "Conclusão",
       "paragrafos": [
-        "Em resumo, este código exemplifica como importar dados externos em formato JSON para uma página web e apresentá-los de maneira estruturada. A utilização de funções assíncronas e manipulação do DOM possibilita uma integração suave e eficiente, enriquecendo a experiência do usuário ao exibir conteúdo dinâmico."
-      ]
-    }
-  ]
-}
+        "Em resumo, este código exemplifica como importar dados externos em formato JSON para uma página web e apresentá-los de maneira estruturada. A utilização de funções assíncronas e manipulação do DOM
