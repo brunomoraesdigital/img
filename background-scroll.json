@@ -1,12 +1,7 @@
 {
   "conteudo": [
     {
-      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável.",
-      "paragrafos": [
-        "Explicação geral: O background fica fixo na janela, não rolando com o conteúdo.",
-        "Contexto específico do elemento filho (fixed): A barra de rolagem no conteúdo move apenas o conteúdo, mantendo o background fixo em relação a tudo.",
-        "Relação com o elemento pai (pai): Ao rolar o conteúdo do pai, o background do filho permanece fixo na janela de visualização, e o conteúdo desse filho rola sobre o background."
-      ]
+      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável."
     },
     {
       "titulo": "Elemento com background-attachment: fixed; (fixed):",
