@@ -1,7 +1,10 @@
 {
   "conteudo": [
     {
-      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável."
+      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável.",
+      "paragrafos": [
+        "Explorando a Interação Dinâmica e Visual entre Elementos Estáticos e Roláveis."
+      ]
     },
     {
       "titulo": "Elemento com background-attachment: fixed; (fixed):",
