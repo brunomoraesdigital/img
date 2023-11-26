@@ -3,7 +3,7 @@
     {
       "titulo": "Comportamento do Plano de Fundo em Relação ao Conteúdo Rolável.",
       "paragrafos": ["Ao projetar uma experiência de usuário envolvente em uma página da web, surge a necessidade de compreender a interação entre o plano de fundo e o conteúdo rolável. A dinâmica que ocorre quando os usuários movem a página revela-se como um elemento crucial no design web. A capacidade de ajustar propriedades no CSS proporciona aos desenvolvedores a liberdade de transformar a rolagem em uma experiência visualmente atraente. O comportamento do plano de fundo em resposta ao movimento do conteúdo é, portanto, um aspecto essencial a ser explorado e refinado na busca por layouts web mais eficazes e impactantes."]
-    },    },
+    },
     {
       "titulo": "Elemento com background-attachment: fixed; (fixed):",
       "paragrafos": [
