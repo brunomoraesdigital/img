@@ -1,10 +1,11 @@
 {
   "conteudo": [
     {
-      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável"
+      "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável.",
+	    "paragrafos": "comportamento do plano de fundo em relação ao conteúdo rolável."
     },
     {
-      "titulo": "Elemento com background-attachment: fixed; (fixed)",
+      "titulo": "Elemento com background-attachment: fixed; (fixed):",
       "paragrafos": [
         "Explicação geral: O background fica fixo na janela, não rolando com o conteúdo.",
         "Contexto específico do elemento filho (fixed): A barra de rolagem no conteúdo move apenas o conteúdo, mantendo o background fixo em relação a tudo.",
@@ -12,19 +13,19 @@
       ]
     },
     {
-      "titulo": "Elemento com background-attachment: scroll; (scroll)",
+      "titulo": "Elemento com background-attachment: scroll; (scroll):",
       "paragrafos": [
         "Explicação geral: O background rola com o conteúdo quando a barra de rolagem é usada.",
         "Contexto específico do elemento filho (scroll): A barra de rolagem no conteúdo move apenas o conteúdo, mantendo o background fixo.",
-        "Relação com o elemento pai (pai): Ao rolar o conteúdo do pai, tanto o conteúdo quanto o background desse elemento filho se movem juntos."
+        "Relação com o elemento pai (pai): Ao rolar o conteúdo do pai, tanto o conteúdo e o background desse elemento filho se movem juntos."
       ]
     },
     {
-      "titulo": "Elemento com background-attachment: local; (local)",
+      "titulo": "Elemento com background-attachment: local; (local):",
       "paragrafos": [
         "Explicação geral: O background rola com o conteúdo, mas localmente dentro da caixa do elemento filho.",
         "Contexto específico do elemento filho (local): A barra de rolagem no conteúdo move tanto o conteúdo quanto o background.",
-        "Relação com o elemento pai (pai): Ao rolar o conteúdo do pai, tanto o conteúdo quanto o background desse elemento filho se movem juntos."
+        "Relação com o elemento pai (pai): Ao rolar o conteúdo do pai, tanto o conteúdo e o background desse elemento filho se movem juntos."
       ]
     }
   ]
