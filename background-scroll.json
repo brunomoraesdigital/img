@@ -2,7 +2,11 @@
   "conteudo": [
     {
       "titulo": "comportamento do plano de fundo em relação ao conteúdo rolável.",
-      "paragrafos":"comportamento do plano de fundo em relação ao conteúdo rolável."
+      "paragrafos":"[
+      "a",
+      "b"
+      "c"
+      ]"
     },
     {
       "titulo": "Elemento com background-attachment: fixed; (fixed):",
